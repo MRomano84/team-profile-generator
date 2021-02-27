@@ -1,6 +1,15 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const { createPromptModule } = require("inquirer");
 
+const employeeData = {
+    managerData: [],
+    engineerData: [],
+    internData: []
+};
 
 //Prompt to create a new employee
 function newEmployee() {
@@ -30,9 +39,11 @@ function newEmployee() {
                 break;
             case 'Done':
                 //...function that will make the html page - I think
+                console.log(employeeData);
+                break;
         }
     })
-}
+};
 
 
 
@@ -60,7 +71,13 @@ function promptManager() {
             message: 'Enter the Manager\'s office number:'
         }
     ])
-}
+    .then((answers) => {
+        const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+        console.log(manager);
+        employeeData.managerData.push(manager);
+        newEmployee();
+    })
+};
 
 //Prompt for creating a Engineer
 function promptEngineer() {
@@ -82,12 +99,16 @@ function promptEngineer() {
         },
         {
             type: 'input',
-            name: 'GitHub',
+            name: 'github',
             message: 'Enter the Engineer\'s GitHub Username:'
         }
     ])
-
-}
+    .then((answers) => {
+        const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+        employeeData.engineerData.push(engineer);
+        newEmployee();
+    })
+};
 
 
 
@@ -115,7 +136,12 @@ function promptIntern() {
             message: 'Where is the Intern attending college?'
         }
     ])
+    .then((answers) => {
+        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+        employeeData.internData.push(intern);
+        newEmployee();
+    })
 
-}
+};
 
 //Need to create the HTML to display Employee cards
