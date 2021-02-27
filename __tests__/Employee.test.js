@@ -8,9 +8,22 @@ test("can set employee name", () => {
     expect(employee.name).toBe(name)
 })
 
+test("can set employee id", () => {
+    const id = 123456;
+    const employee = new Employee("", id, "");
+
+    expect(employee.getId()).toBe(123456)
+})
+
 test("can set employee email", () => {
     const email = "any@email.com";
-    const employee = new Employee("any", 1, email);
+    const employee = new Employee("", 123456 , email);
 
     expect(employee.getEmail()).toBe("any@email.com")
+})
+
+test("can set role", () => {
+    const employee = new Employee;
+
+    expect(employee.getRole()).toBe(Employee);
 })
