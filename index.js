@@ -1,6 +1,5 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { functionExpression } = require("@babel/types");
 
 
 //Prompt to create a new employee
