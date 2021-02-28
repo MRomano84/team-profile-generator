@@ -39,6 +39,7 @@ function newEmployee() {
                 break;
             case 'Done':
                 //...function that will make the html page - I think
+                createHTML();
                 console.log(employeeData);
                 break;
         }
@@ -145,7 +146,7 @@ function promptIntern() {
 };
 
 //Need to create the HTML to display Employee cards
-const htmlPage = () => {
+const htmlPage = () => 
     `<!DOCTYPE html>
     <html lang="en">
 
@@ -187,6 +188,7 @@ const htmlPage = () => {
                         MANAGERS
                     </h3>
                     <!--  GENERATED MANAGER CARD WITH USER INFO GOES HERE   -->
+                    ${managerCardData()}
                 </div>
             </div>
 
@@ -199,6 +201,7 @@ const htmlPage = () => {
                     <h3 class="engHeader">
                         ENGINEERS
                     </h3>
+                    <!--  GENERATED ENGINEER CARD WITH USER INFO GOES HERE   -->
                 </div>
             </div>
 
@@ -212,6 +215,7 @@ const htmlPage = () => {
                     <h3 class="intHeader">
                         INTERNS
                     </h3>
+                    <!--  GENERATED INTERN CARD WITH USER INFO GOES HERE   -->
                 </div>
             </div>
 
@@ -221,4 +225,33 @@ const htmlPage = () => {
     </body>
 
     </html>`
+
+
+const createHTML = () => {
+    fs.writeFile('main.html', htmlPage(), (err) => {
+        err ? console.log(err) : console.log('main.html has been created');
+    })
+};
+
+//Need to make functions that make employee cards then stuff them into the html
+function managerCard(Manager) {
+    return `<div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">MANAGER</h5>
+                    <h4 class="managerName">${Manager.name}</h4>
+                    <p class="idNum">ID#: ${Manager.id}</p>
+                    <p class="emailAdd">Email: ${Manager.email}</p>
+                    <p class="officeNumber">Office Number: ${Manager.officeNum}</p>
+                </div>
+            </div>`
 }
+
+function managerCardData() {
+    let manData = "";
+    employeeData.managerData.forEach(manager => {
+        manData += managerCard(manager);
+    })
+    return manData;
+}
+
+newEmployee();
