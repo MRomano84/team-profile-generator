@@ -11,6 +11,7 @@ This command line application allows you make profile cards for your employees. 
 * [License](#license)
 * [How to Contribute](#How-to-Contribute)
 * [Example](#example)
+* [Walkthrough Video](#walkthrough-video)
 * [Questions](#questions)
 
 ----------------------------------
@@ -30,6 +31,10 @@ This application is covered by MIT License.
 ----------------------------------
 
 ![html page screenshot](./src/screenshot.png)
+
+## Walkthrough Video
+
+[Link to the Walkthrough Video](https://drive.google.com/file/d/1gtzIXh4LGkhsk6DvgI5bAu6AUy0W-c6j/view?usp=sharing)
 
 
 ## How to Contribute
