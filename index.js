@@ -155,29 +155,40 @@ const htmlPage = () =>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@1,300&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&display=swap" rel="stylesheet">
 
 
         <title>Employee Profiles</title>
 
         <style>
-            body {
-                background-image: url(./src/bg1.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
+        body {
+            background-image: url(./src/bg1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
-            h1.title {
-                color: coral;
-                text-shadow: whitesmoke 1px 1px;
-            }
+        h1.title {
+            color: coral;
+            text-shadow: whitesmoke 1px 1px;
+            font-family: 'BioRhyme', serif;
+        }
 
-            h3.title {
-                color: black;
-                text-shadow: whitesmoke 1px 1px;
-            }
+        h3.title {
+            color: black;
+            text-shadow: whitesmoke 1px 1px;
+            font-family: 'BioRhyme', serif;
+        }
 
-        </style>
+        div.type {
+            font-family: 'Taviraj', serif;
+        }
+    </style>
 
     </head>
 
@@ -193,46 +204,46 @@ const htmlPage = () =>
         <div class="container" style="justify-content: center;">
 
             <!--   Manager cards   -->
-            <div class="row" style="outline-color: coral; outline-style: inset; padding: 3px; margin: 5px;">
+            <div class="row" style="outline: 10px inset coral; padding: 3px; margin: 5px;">
                 <div class="managers">
                     <h3 class="manHeader title">
                         MANAGERS
                     </h3>
                     <!--  GENERATED MANAGER CARD WITH USER INFO GOES HERE   -->
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="row type row-cols-1 row-cols-md-3 g-4">
                     ${managerCardData()}
                     </div>
                 </div>
             </div>
 
             <!--   Empty div for spacing purposes   -->
-            <div class="row empty"></div>
+            <div class="row empty"><br></div>
 
             <!--   Engineer cards   -->
-            <div class="row" style="outline-color: coral; outline-style: inset; padding: 3px; margin: 5px;">
+            <div class="row" style="outline: 10px inset coral; padding: 3px; margin: 5px;">
                 <div class="engineers">
                     <h3 class="engHeader title">
                         ENGINEERS
                     </h3>
                     <!--  GENERATED ENGINEER CARD WITH USER INFO GOES HERE   -->
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="row type row-cols-1 row-cols-md-3 g-4">
                     ${engineerCardData()}
                     </div>
                 </div>
             </div>
 
             <!--   Empty div for spacing purposes   -->
-            <div class="row empty"></div>
+            <div class="row empty"><br></div>
 
 
             <!--   Intern cards   -->
-            <div class="row" style="outline-color: coral; outline-style: inset; padding: 3px; margin: 5px;">
+            <div class="row" style="outline: 10px inset coral; padding: 3px; margin: 5px;">
                 <div class="interns">
                     <h3 class="intHeader title">
                         INTERNS
                     </h3>
                     <!--  GENERATED INTERN CARD WITH USER INFO GOES HERE   -->
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="row type row-cols-1 row-cols-md-3 g-4">
                     ${internCardData()}
                     </div>
                 </div>
