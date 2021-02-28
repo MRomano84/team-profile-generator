@@ -40,7 +40,7 @@ function newEmployee() {
             case 'Done':
                 //...function that will make the html page - I think
                 createHTML();
-                console.log(employeeData);
+                // console.log(employeeData);
                 break;
         }
     })
@@ -164,8 +164,21 @@ const htmlPage = () =>
 
         <style>
             body {
-                background-color: #335252;
+                background-image: url(./src/bg1.png);
+                background-size: cover;
+                background-repeat: no-repeat;
             }
+
+            h1.title {
+                color: coral;
+                text-shadow: whitesmoke 1px 1px;
+            }
+
+            h3.title {
+                color: black;
+                text-shadow: whitesmoke 1px 1px;
+            }
+
         </style>
 
     </head>
@@ -176,19 +189,21 @@ const htmlPage = () =>
 
         <!--  Header  -->
         <div class="jumbotron jumbotron-fluid text-center" style="margin-bottom: 3rem;">
-            <h1 class="display-1">Your Company's Emploee Profiles</h1>
+            <h1 class="display-1 title">Your Company's Emploee Profiles</h1>
         </div>
 
         <div class="container" style="justify-content: center;">
 
             <!--   Manager cards   -->
-            <div class="row" style="outline-color: #d4dde1; outline-style: inset; padding: 3px; margin: 5px;">
+            <div class="row" style="outline-color: coral; outline-style: inset; padding: 3px; margin: 5px;">
                 <div class="managers">
-                    <h3 class="manHeader">
+                    <h3 class="manHeader title">
                         MANAGERS
                     </h3>
                     <!--  GENERATED MANAGER CARD WITH USER INFO GOES HERE   -->
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
                     ${managerCardData()}
+                    </div>
                 </div>
             </div>
 
@@ -196,13 +211,15 @@ const htmlPage = () =>
             <div class="row empty"></div>
 
             <!--   Engineer cards   -->
-            <div class="row" style="outline-color: #aa4b41; outline-style: inset; padding: 3px; margin: 5px;">
+            <div class="row" style="outline-color: coral; outline-style: inset; padding: 3px; margin: 5px;">
                 <div class="engineers">
-                    <h3 class="engHeader">
+                    <h3 class="engHeader title">
                         ENGINEERS
                     </h3>
                     <!--  GENERATED ENGINEER CARD WITH USER INFO GOES HERE   -->
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
                     ${engineerCardData()}
+                    </div>
                 </div>
             </div>
 
@@ -211,13 +228,15 @@ const htmlPage = () =>
 
 
             <!--   Intern cards   -->
-            <div class="row" style="outline-color: #2d3033; outline-style: inset; padding: 3px; margin: 5px;">
+            <div class="row" style="outline-color: coral; outline-style: inset; padding: 3px; margin: 5px;">
                 <div class="interns">
-                    <h3 class="intHeader">
+                    <h3 class="intHeader title">
                         INTERNS
                     </h3>
                     <!--  GENERATED INTERN CARD WITH USER INFO GOES HERE   -->
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
                     ${internCardData()}
+                    </div>
                 </div>
             </div>
 
@@ -238,13 +257,15 @@ const createHTML = () => {
 //Need to make functions that make employee cards then stuff them into the html
 //MANAGER CARD
 function managerCard(Manager) {
-    return `<div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">MANAGER</h5>
-                    <h4 class="managerName">${Manager.name}</h4>
-                    <p class="idNum">ID#: ${Manager.id}</p>
-                    <p class="emailAdd">Email: ${Manager.email}</p>
-                    <p class="officeNumber">Office Number: ${Manager.officeNum}</p>
+    return `<div class="col">
+                <div class="card border-dark" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">MANAGER</h5>
+                        <h4 class="cardName">${Manager.name}</h4>
+                        <p class="idNum">ID#: ${Manager.id}</p>
+                        <p class="emailAdd">Email: ${Manager.email}</p>
+                        <p class="specialInfo">Office Number: ${Manager.officeNum}</p>
+                    </div>
                 </div>
             </div>`
 }
@@ -259,13 +280,15 @@ function managerCardData() {
 
 //ENGINEER CARD
 function engineerCard(Engineer) {
-    return `<div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">ENGINEER</h5>
-                    <h4 class="managerName">${Engineer.name}</h4>
-                    <p class="idNum">ID#: ${Engineer.id}</p>
-                    <p class="emailAdd">Email: ${Engineer.email}</p>
-                    <p class="officeNumber">Office Number: ${Engineer.gitHub}</p>
+    return `<div class="col">
+                <div class="card border-dark" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">ENGINEER</h5>
+                        <h4 class="cardName">${Engineer.name}</h4>
+                        <p class="idNum">ID#: ${Engineer.id}</p>
+                        <p class="emailAdd">Email: ${Engineer.email}</p>
+                        <p class="specialInfo">GitHub Username: ${Engineer.gitHub}</p>
+                    </div>
                 </div>
             </div>`
 }
@@ -280,13 +303,15 @@ function engineerCardData() {
 
 //INTERN CARD
 function internCard(Intern) {
-    return `<div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">INTERN</h5>
-                    <h4 class="managerName">${Intern.name}</h4>
-                    <p class="idNum">ID#: ${Intern.id}</p>
-                    <p class="emailAdd">Email: ${Intern.email}</p>
-                    <p class="officeNumber">Office Number: ${Intern.school}</p>
+    return `<div class="col">
+                <div class="card border-dark" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">INTERN</h5>
+                        <h4 class="cardName">${Intern.name}</h4>
+                        <p class="idNum">ID#: ${Intern.id}</p>
+                        <p class="emailAdd">Email: ${Intern.email}</p>
+                        <p class="specialInfo">College: ${Intern.school}</p>
+                    </div>
                 </div>
             </div>`
 }
