@@ -40,7 +40,6 @@ function newEmployee() {
             case 'Done':
                 //...function that will make the html page - I think
                 createHTML();
-                // console.log(employeeData);
                 break;
         }
     })
@@ -74,7 +73,6 @@ function promptManager() {
     ])
     .then((answers) => {
         const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
-        console.log(manager);
         employeeData.managerData.push(manager);
         newEmployee();
     })
