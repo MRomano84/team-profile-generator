@@ -145,3 +145,80 @@ function promptIntern() {
 };
 
 //Need to create the HTML to display Employee cards
+const htmlPage = () => {
+    `<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+        <title>Employee Profiles</title>
+
+        <style>
+            body {
+                background-color: #335252;
+            }
+        </style>
+
+    </head>
+
+
+    <body>
+
+
+        <!--  Header  -->
+        <div class="jumbotron jumbotron-fluid text-center" style="margin-bottom: 3rem;">
+            <h1 class="display-1">Your Company's Emploee Profiles</h1>
+        </div>
+
+        <div class="container" style="justify-content: center;">
+
+            <!--   Manager cards   -->
+            <div class="row" style="outline-color: #d4dde1; outline-style: inset; padding: 3px; margin: 5px;">
+                <div class="managers">
+                    <h3 class="manHeader">
+                        MANAGERS
+                    </h3>
+                    <!--  GENERATED MANAGER CARD WITH USER INFO GOES HERE   -->
+                </div>
+            </div>
+
+            <!--   Empty div for spacing purposes   -->
+            <div class="row empty"></div>
+
+            <!--   Engineer cards   -->
+            <div class="row" style="outline-color: #aa4b41; outline-style: inset; padding: 3px; margin: 5px;">
+                <div class="engineers">
+                    <h3 class="engHeader">
+                        ENGINEERS
+                    </h3>
+                </div>
+            </div>
+
+            <!--   Empty div for spacing purposes   -->
+            <div class="row empty"></div>
+
+
+            <!--   Intern cards   -->
+            <div class="row" style="outline-color: #2d3033; outline-style: inset; padding: 3px; margin: 5px;">
+                <div class="interns">
+                    <h3 class="intHeader">
+                        INTERNS
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+
+
+    </body>
+
+    </html>`
+}
