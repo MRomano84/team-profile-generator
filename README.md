@@ -7,22 +7,30 @@ This command line application allows you make profile cards for your employees. 
 
 ## Table of Contents
 
-* [Usage](#usage)
 * [Installation](#installation)
 * [License](#license)
 * [How to Contribute](#How-to-Contribute)
+* [Example](#example)
 * [Questions](#questions)
 
 ----------------------------------
 
-## Usage
-The app would be used by employers who want a database of their employee profiles.
-
 ## Installation
-First, clone the repository. Then, from the command line, run `npm i` to install dependencies. Finally, run `node index.js` and follow the prompts. Once you are finished a file name 'main.html'will be added to the folder. Open that file in your browser.
+First, clone the repository. Then, from the command line, run `npm i` to install dependencies. Finally, run `node index.js` and follow the prompts. Once you are finished a file name 
+'main.html'will be added to the folder. Open that file in your browser.
+
 
 ## License
 This application is covered by MIT License.
+
+## Example
+----------------------------------
+![command line screenshot](./src/screenshot2.png)
+
+----------------------------------
+
+![html page screenshot](./src/screenshot.png)
+
 
 ## How to Contribute
 If you would like to contribute to this project, you can Clone the repo, make changes, make a pull request!.
