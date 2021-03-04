@@ -26,11 +26,11 @@ This application is covered by MIT License.
 
 ## Example
 ----------------------------------
-![command line screenshot](./src/screenshot2.png)
+![command line screenshot](https://github.com/MRomano84/team-profile-generator/blob/main/src/screenshot2.PNG)
 
 ----------------------------------
 
-![html page screenshot](./src/screenshot.png)
+![html page screenshot](https://github.com/MRomano84/team-profile-generator/blob/main/src/screenshot.PNG)
 
 ## Walkthrough Video
 
