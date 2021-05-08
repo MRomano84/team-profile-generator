@@ -9,7 +9,6 @@ This command line application allows you make profile cards for your employees. 
 
 * [Installation](#installation)
 * [License](#license)
-* [How to Contribute](#How-to-Contribute)
 * [Example](#example)
 * [Walkthrough Video](#walkthrough-video)
 * [Questions](#questions)
@@ -22,7 +21,7 @@ First, clone the repository. Then, from the command line, run `npm i` to install
 
 
 ## License
-This application is covered by MIT License.
+This application is covered by [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Example
 ----------------------------------
@@ -32,13 +31,13 @@ This application is covered by MIT License.
 
 ![html page screenshot](https://github.com/MRomano84/team-profile-generator/blob/main/src/screenshot.PNG)
 
+----------------------------------
+
 ## Walkthrough Video
 
 [Link to the Walkthrough Video](https://drive.google.com/file/d/1gtzIXh4LGkhsk6DvgI5bAu6AUy0W-c6j/view?usp=sharing)
 
-
-## How to Contribute
-If you would like to contribute to this project, you can Clone the repo, make changes, make a pull request!.
+-----------------------------------
 
 ## Questions
 If you have any questions, I can be reached at [mathiasrok@gmail.com](mathiasrok@gmail.com)
